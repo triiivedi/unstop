@@ -5,7 +5,9 @@
   "main": "index.tsx",
   "scripts": {
     "build": "webpack --config webpack/webpack.prod.js",
-    "start": "webpack serve --config webpack/webpack.dev.js"
+    "start": "webpack serve --config webpack/webpack.dev.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
@@ -40,6 +42,7 @@
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-react": "^6.24.1",
+    "gh-pages": "^6.0.0",
     "html-webpack-plugin": "^5.5.3",
     "react-require": "^1.0.1",
     "typescript": "^5.1.6"
